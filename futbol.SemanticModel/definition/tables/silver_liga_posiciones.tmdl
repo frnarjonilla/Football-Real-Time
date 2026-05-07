@@ -1,0 +1,121 @@
+table silver_liga_posiciones
+	lineageTag: 32250013-e663-4e62-bde3-0183777c350f
+	sourceLineageTag: [dbo].[silver_liga_posiciones]
+
+	column id_equipo
+		dataType: int64
+		formatString: 0
+		lineageTag: a76e8f2d-8dcf-4d07-b7f9-d215ef45b3e7
+		sourceLineageTag: id_equipo
+		summarizeBy: none
+		sourceColumn: id_equipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column position
+		dataType: int64
+		formatString: 0
+		lineageTag: 002ab7d8-88d5-4084-9f7d-9ba1c0eb6ec7
+		sourceLineageTag: position
+		summarizeBy: sum
+		sourceColumn: position
+
+		annotation SummarizationSetBy = Automatic
+
+	column equipo
+		dataType: string
+		lineageTag: 0e66c157-3173-4c31-91f7-2a9b8f2d16e9
+		sourceLineageTag: equipo
+		summarizeBy: none
+		sourceColumn: equipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column partidos_jugados
+		dataType: int64
+		formatString: 0
+		lineageTag: 096a47b8-a708-4abb-bcfd-ca9ab89a7060
+		sourceLineageTag: partidos_jugados
+		summarizeBy: sum
+		sourceColumn: partidos_jugados
+
+		annotation SummarizationSetBy = Automatic
+
+	column victorias
+		dataType: int64
+		formatString: 0
+		lineageTag: de0f0d3d-5bca-407e-bd4e-7d8a097ecd60
+		sourceLineageTag: victorias
+		summarizeBy: sum
+		sourceColumn: victorias
+
+		annotation SummarizationSetBy = Automatic
+
+	column empates
+		dataType: int64
+		formatString: 0
+		lineageTag: d9350f6b-f892-4dc5-aed9-d8e9b0e9612b
+		sourceLineageTag: empates
+		summarizeBy: sum
+		sourceColumn: empates
+
+		annotation SummarizationSetBy = Automatic
+
+	column derrotas
+		dataType: int64
+		formatString: 0
+		lineageTag: edaf2ec8-4e66-47c6-ac16-8bf52257eed8
+		sourceLineageTag: derrotas
+		summarizeBy: sum
+		sourceColumn: derrotas
+
+		annotation SummarizationSetBy = Automatic
+
+	column puntos
+		dataType: int64
+		formatString: 0
+		lineageTag: b6b0bd93-9c70-4cd9-853b-b83cc285a936
+		sourceLineageTag: puntos
+		summarizeBy: sum
+		sourceColumn: puntos
+
+		annotation SummarizationSetBy = Automatic
+
+	column goles_a_favor
+		dataType: int64
+		formatString: 0
+		lineageTag: 8d784ad7-ac85-4945-88b6-eb1da08b90ab
+		sourceLineageTag: goles_a_favor
+		summarizeBy: sum
+		sourceColumn: goles_a_favor
+
+		annotation SummarizationSetBy = Automatic
+
+	column goles_en_contra
+		dataType: int64
+		formatString: 0
+		lineageTag: 8cfc753c-c3cc-4232-aa39-f4b465b857e5
+		sourceLineageTag: goles_en_contra
+		summarizeBy: sum
+		sourceColumn: goles_en_contra
+
+		annotation SummarizationSetBy = Automatic
+
+	column url_escudo
+		dataType: string
+		lineageTag: f272736b-795c-4bf8-b584-258489955e59
+		sourceLineageTag: url_escudo
+		dataCategory: ImageUrl
+		summarizeBy: none
+		sourceColumn: url_escudo
+
+		changedProperty = DataCategory
+
+		annotation SummarizationSetBy = Automatic
+
+	partition silver_liga_posiciones = entity
+		mode: directLake
+		source
+			entityName: silver_liga_posiciones
+			expressionSource: 'DirectLake - Lakehouse_futbol'
+

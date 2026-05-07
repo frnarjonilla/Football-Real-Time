@@ -1,0 +1,107 @@
+table silver_partidos
+	lineageTag: 61236f06-deb1-4390-bc7a-2e504fd24ab2
+	sourceLineageTag: [dbo].[silver_partidos]
+
+	column id_partido
+		dataType: int64
+		formatString: 0
+		lineageTag: c0417bb8-3895-432f-aa08-616dc694b3ec
+		sourceLineageTag: id_partido
+		summarizeBy: sum
+		sourceColumn: id_partido
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_equipo_local
+		dataType: int64
+		formatString: 0
+		lineageTag: 4c8b617a-fea9-4f35-b212-7cc99fbcb164
+		sourceLineageTag: id_equipo_local
+		summarizeBy: none
+		sourceColumn: id_equipo_local
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_equipo_visitante
+		dataType: int64
+		formatString: 0
+		lineageTag: aea6d994-6964-47a9-a516-5ce6f28a6403
+		sourceLineageTag: id_equipo_visitante
+		summarizeBy: sum
+		sourceColumn: id_equipo_visitante
+
+		annotation SummarizationSetBy = Automatic
+
+	column fecha_hora
+		dataType: dateTime
+		formatString: General Date
+		lineageTag: 76534477-4006-4a74-a1d3-7c8c143e27d0
+		sourceLineageTag: fecha_hora
+		summarizeBy: none
+		sourceColumn: fecha_hora
+
+		annotation SummarizationSetBy = Automatic
+
+	column estado
+		dataType: string
+		lineageTag: bc9b72e8-f1f2-42cc-b0cb-bf58a6870067
+		sourceLineageTag: estado
+		summarizeBy: none
+		sourceColumn: estado
+
+		annotation SummarizationSetBy = Automatic
+
+	column jornada
+		dataType: int64
+		formatString: 0
+		lineageTag: 18c75be7-4822-4e7c-9db8-af0bb0de5925
+		sourceLineageTag: jornada
+		summarizeBy: sum
+		sourceColumn: jornada
+
+		annotation SummarizationSetBy = Automatic
+
+	column equipo_local
+		dataType: string
+		lineageTag: ae2c9407-2c1b-42c8-813f-ccdc9c65813c
+		sourceLineageTag: equipo_local
+		summarizeBy: none
+		sourceColumn: equipo_local
+
+		annotation SummarizationSetBy = Automatic
+
+	column equipo_visitante
+		dataType: string
+		lineageTag: a5aca8f4-8668-40a3-8988-25211acf2c70
+		sourceLineageTag: equipo_visitante
+		summarizeBy: none
+		sourceColumn: equipo_visitante
+
+		annotation SummarizationSetBy = Automatic
+
+	column goles_local
+		dataType: int64
+		formatString: 0
+		lineageTag: 5711fbd0-90f5-4ecb-9e38-604e20fac62d
+		sourceLineageTag: goles_local
+		summarizeBy: sum
+		sourceColumn: goles_local
+
+		annotation SummarizationSetBy = Automatic
+
+	column goles_visitante
+		dataType: int64
+		formatString: 0
+		lineageTag: df559f34-0375-47f1-9867-e729f96ee71d
+		sourceLineageTag: goles_visitante
+		summarizeBy: sum
+		sourceColumn: goles_visitante
+
+		annotation SummarizationSetBy = Automatic
+
+	partition silver_partidos = entity
+		mode: directLake
+		source
+			entityName: silver_partidos
+			expressionSource: 'DirectLake - Lakehouse_futbol'
+

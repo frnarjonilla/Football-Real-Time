@@ -1,0 +1,77 @@
+table silver_goleadores
+	lineageTag: 5326c25c-2864-4bf0-9c32-f78fc00ef66e
+	sourceLineageTag: [dbo].[silver_goleadores]
+
+	column id_equipo
+		dataType: int64
+		formatString: 0
+		lineageTag: be3191a5-a0e3-41aa-8638-9d024396dd1f
+		sourceLineageTag: id_equipo
+		summarizeBy: none
+		sourceColumn: id_equipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column id_jugador
+		dataType: int64
+		formatString: 0
+		lineageTag: 75216818-c809-47f9-96f9-321ee9ce8e59
+		sourceLineageTag: id_jugador
+		summarizeBy: sum
+		sourceColumn: id_jugador
+
+		annotation SummarizationSetBy = Automatic
+
+	column jugador
+		dataType: string
+		lineageTag: 493eb5b0-73db-4aa9-b12d-6ea811fbf4fe
+		sourceLineageTag: jugador
+		summarizeBy: none
+		sourceColumn: jugador
+
+		annotation SummarizationSetBy = Automatic
+
+	column nacionalidad
+		dataType: string
+		lineageTag: 2beae862-3b82-484a-8bec-60ba701e0a5b
+		sourceLineageTag: nacionalidad
+		summarizeBy: none
+		sourceColumn: nacionalidad
+
+		annotation SummarizationSetBy = Automatic
+
+	column equipo
+		dataType: string
+		lineageTag: 07ccfea5-4760-4e8f-87d7-e4d28d61d6d0
+		sourceLineageTag: equipo
+		summarizeBy: none
+		sourceColumn: equipo
+
+		annotation SummarizationSetBy = Automatic
+
+	column goles
+		dataType: int64
+		formatString: 0
+		lineageTag: a9332629-9259-47af-ad25-8b8e12642c40
+		sourceLineageTag: goles
+		summarizeBy: sum
+		sourceColumn: goles
+
+		annotation SummarizationSetBy = Automatic
+
+	column asistencias
+		dataType: int64
+		formatString: 0
+		lineageTag: cba9d269-7b06-4061-b575-0d6fec6d3e41
+		sourceLineageTag: asistencias
+		summarizeBy: sum
+		sourceColumn: asistencias
+
+		annotation SummarizationSetBy = Automatic
+
+	partition silver_goleadores = entity
+		mode: directLake
+		source
+			entityName: silver_goleadores
+			expressionSource: 'DirectLake - Lakehouse_futbol'
+

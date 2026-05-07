@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "dashboard futbol"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "72994c33-dfb3-80c3-4d31-c946d69fcf22"
+  }
+}

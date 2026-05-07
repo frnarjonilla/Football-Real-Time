@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Notebook",
+    "displayName": "football_data"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "9a4057e4-6e49-8f5e-4791-c77f983e922b"
+  }
+}

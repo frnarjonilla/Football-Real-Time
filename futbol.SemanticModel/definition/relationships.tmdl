@@ -1,0 +1,8 @@
+relationship 04f7fa39-34d2-7097-64a7-7269bad28bfc
+	fromColumn: silver_partidos.id_equipo_local
+	toColumn: silver_liga_posiciones.id_equipo
+
+relationship 7713aa37-4a6c-2ce7-2022-f4e5564b2066
+	fromColumn: silver_goleadores.id_equipo
+	toColumn: silver_liga_posiciones.id_equipo
+

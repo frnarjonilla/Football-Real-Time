@@ -1,0 +1,11 @@
+expression 'DirectLake - Lakehouse_futbol' =
+		let
+		    Source = AzureStorage.DataLake("https://onelake.dfs.fabric.microsoft.com/27bd691f-29b2-4d3f-8fbd-3546bb0d7270/6144e6dd-f07c-4a3b-ba0f-a0b271621d66", [HierarchicalNavigation=true])
+		in
+		    Source
+	lineageTag: 3476bdb6-903a-41c8-8c19-0792896413e0
+
+	annotation PBI_IncludeFutureArtifacts = False
+
+	annotation PBI_RemovedChildren = [{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[tabla_liga_espanola]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[tabla_goleadores]"}},"objectType":"Table"},{"remoteItemId":{"analysisServicesObject":{"sourceName":null,"sourceLineageTag":"[dbo].[tabla_partidos]"}},"objectType":"Table"}]
+
