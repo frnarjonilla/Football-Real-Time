@@ -26,7 +26,7 @@ import requests  # Esta librería sirve para "llamar" a la API
 import pandas as pd # Esta sirve para ver los datos como una tabla de Excel
 
 # 1. Tu llave mágica (pega aquí la que te llegó al correo)
-mi_llave = "7780c3db148b480d953c501394507d7b"
+mi_llave = "aqui tu api key"
 
 # 2. La dirección de internet donde están los datos (Liga Española)
 url = "https://api.football-data.org/v4/competitions/PD/standings"
